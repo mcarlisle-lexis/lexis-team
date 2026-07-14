@@ -31,6 +31,11 @@ npx serve lexis-team -l 4141      # http://localhost:4141
   "Team: Head Office", their "Department" (Marketing/Registrations) and where they're "Based";
   campus staff show "Campus".
 - Photos processed to a consistent 4:5 crop; staff without a photo get a branded initials avatar.
+- **Language flags:** each person's spoken languages show inline SVG flags (rendered in-page so they
+  look identical on every OS — Windows/Chrome don't draw flag emoji). Map lives in `FLAG` / `LANG_CODE`
+  in `index.html`; add a language by adding its keyword→code and a flag SVG.
+- **Tenure medallions:** add `years: 5|10|15|20` to a person to show a bronze/silver/gold/emerald
+  badge on their card and profile. Currently: Mike 5, Jason 10, Nami 15, Ian 20.
 
 ### Groups
 `campus` on each person is the filter bucket: a campus name, or `"Head Office"`.
