@@ -47,7 +47,7 @@ window.PEOPLE = [
   },
   {
     slug: "ian-pratt", name: "Ian Pratt", role: "Managing Director",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Noosa", languages: "English, Japanese", hometown: "Canberra, Australia", since: "Born here", photo: "ian-pratt.jpg",
+    campus: "Head Office", dept: "Marketing", campusLabel: "Noosa", languages: "English, Japanese", hometown: "Canberra, Australia", since: "Born here", years: 20, photo: "ian-pratt.jpg",
     bio: `After living overseas as international students, my wife and I started Lexis back in 2004. We're incredibly lucky that we've been able to spend our lives doing a job that we're absolutely passionate about.`,
     q1: `I work with a great team at Lexis to run our operations in Australia! I have a great job — I work with a wonderful team, I meet students from all over the world, and I get to travel to amazing places!`,
     q2: `I'm not meant to have a favourite school, but there's something very special about Noosa. No matter where you're from, you can become part of the community here. Slow down and enjoy a completely different lifestyle while you study!`,
@@ -67,7 +67,7 @@ window.PEOPLE = [
   },
   {
     slug: "jason-knapp", name: "Jason Knapp", role: "Marketing Director",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Noosa", languages: "English", hometown: "Brisbane, Australia", since: "Since birth", photo: "jason-knapp.jpg",
+    campus: "Head Office", dept: "Marketing", campusLabel: "Noosa", languages: "English", hometown: "Brisbane, Australia", since: "Since birth", years: 10, photo: "jason-knapp.jpg",
     bio: `With a career spanning multiple Queensland universities, I've now called Lexis home for almost ten years — a journey that has connected me with students and education partners from over 50 countries. I divide my time between Brisbane and Noosa, and I'm a firm believer that Noosa's lifestyle is second to none. When I'm not working, you'll find me travelling the world, exploring new cities, sampling local cuisines and immersing myself in how people truly live.`,
     q1: `I help students choose the study plan and location that's the best fit for them across our schools. The right learning experience isn't just about the course — it's about life outside the classroom too. Matching students with the right experience is what I do best.`,
     q2: `Australian study life is all about cultural openness. Get out there, talk to the locals, hear their stories, and use what you learn in class to grow and connect.`,
@@ -92,7 +92,7 @@ window.PEOPLE = [
   },
   {
     slug: "mike-carlisle", name: "Mike Carlisle", role: "Direct Marketing",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Brisbane", languages: "English", hometown: "Manchester, UK", since: "2018", photo: "mike-carlisle.jpg",
+    campus: "Head Office", dept: "Marketing", campusLabel: "Brisbane", languages: "English", hometown: "Manchester, UK", since: "2018", years: 5, photo: "mike-carlisle.jpg",
     bio: `Manchester-born Mike has spent nearly 20 years in English language education across the UK, Ireland, New Zealand and Australia — from summer camps to universities — before making the move Down Under in 2018. At Lexis, he helps students find the right course and campus to get the most out of their time in Australia. Traded Manchester rain for Brisbane sunshine; kept the Oasis records.`,
     q1: `I made the same move our students make — left Manchester for Australia in 2018 — so I know exactly what the big questions feel like. Now I help students answer them: which course, which campus, city or beach town, so the Australia they get matches the Australia they imagined.`,
     q2: `There's no wrong Lexis campus, just different flavours — big-city energy in Sydney and Brisbane, or beach towns where your teacher surfs before class. Pick the Australia you want to live in.`,
@@ -100,7 +100,7 @@ window.PEOPLE = [
   },
   {
     slug: "nami-lee", name: "Nami Lee", role: "Graphic Designer",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Brisbane", languages: "English, Korean", hometown: "Seoul, South Korea", since: "2015", photo: "nami-lee.jpg",
+    campus: "Head Office", dept: "Marketing", campusLabel: "Brisbane", languages: "English, Korean", hometown: "Seoul, South Korea", since: "2015", years: 15, photo: "nami-lee.jpg",
     bio: `Born in Seoul, Nami fell in love with Australia on a working holiday in 2015 and never left. As Lexis' graphic designer, she creates all the visual materials that help students navigate their journey.`,
     q1: `I handle everything design — from the Instagram videos you watch to the brochure you're reading right now! My job is to make everything at Lexis look beautiful and truly 'Lexi-fied', making it easier and more exciting for you to find us.`,
     q2: `Pack an open mind and a sense of adventure! Whichever Lexis campus you choose, you're going to absolutely fall in love with the Australian lifestyle from day one.`,

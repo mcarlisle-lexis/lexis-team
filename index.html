@@ -119,6 +119,11 @@
     .card-name{font-family:"Oswald",sans-serif; font-weight:600; font-size:20px; line-height:1.05; margin:0}
     .card-role{color:var(--ink-soft); font-size:13px; margin:5px 0 0; line-height:1.35}
     .card-home{color:var(--muted); font-size:12px; margin:9px 0 0; display:flex; align-items:center; gap:5px}
+    .card-langs{margin:10px 0 0; display:flex; gap:5px; align-items:center; flex-wrap:wrap}
+    .card-langs .flag{width:22px}
+    .flag{display:inline-block; width:1.25em; height:auto; aspect-ratio:4/3; border-radius:2px; overflow:hidden; vertical-align:-.18em; box-shadow:0 0 0 .5px rgba(26,23,20,.18)}
+    .m-meta .tag .flag{vertical-align:-.16em}
+    .tenure-card{position:absolute; right:9px; top:9px; z-index:3; line-height:0; filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
 
     .empty{text-align:center; padding:70px 20px; color:var(--muted)}
     .empty .osw{font-size:26px; color:var(--ink); display:block; margin-bottom:6px}
@@ -137,9 +142,10 @@
       animation:pop .22s ease;
     }
     @keyframes pop{from{opacity:0; transform:translateY(14px) scale(.98)}to{opacity:1; transform:none}}
-    .m-photo{position:relative; background:#efe9e1; min-height:360px}
-    .m-photo img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0}
-    .m-photo .avatar{position:absolute; inset:0; font-size:90px}
+    .m-photo{position:relative; display:flex; align-items:center; justify-content:center; background:#efe9e1; overflow:hidden}
+    .m-photo .frame{position:relative; width:100%; aspect-ratio:4/5; overflow:hidden}
+    .m-photo .frame img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block}
+    .m-photo .frame .avatar{position:absolute; inset:0; width:100%; height:100%; font-size:90px}
     .m-body{padding:28px 30px 30px; min-width:0}
     .m-close{
       position:absolute; right:16px; top:16px; z-index:10;
@@ -150,6 +156,9 @@
     .m-close:hover{background:#fff; transform:scale(1.05)}
     .m-name{font-family:"Oswald",sans-serif; font-weight:600; font-size:clamp(28px,4vw,40px); line-height:1; margin:0}
     .m-role{color:var(--orange-dk); font-weight:600; font-size:15px; margin:8px 0 0}
+    .m-tenure{display:flex; align-items:center; gap:11px; margin:16px 0 0}
+    .m-tenure span{font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:14px; color:var(--ink)}
+    .m-tenure span small{display:block; font-size:11px; color:var(--muted); letter-spacing:.04em}
     .m-meta{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0}
     .m-meta .tag{
       font-size:12.5px; color:var(--ink-soft); background:var(--paper);
@@ -173,7 +182,7 @@
 
     @media (max-width:640px){
       .modal{grid-template-columns:1fr}
-      .m-photo{min-height:300px; aspect-ratio:4/3}
+      .m-photo .frame{max-height:72vh; width:auto}
       .m-body{padding:22px 20px 26px}
       .count{width:100%; margin:4px 0 0}
     }
@@ -228,6 +237,62 @@
       "Head Office":"#5B6CF0"
     };
     const isTeam = c => TEAM_ORDER.includes(c);
+
+    // Inline SVG flags (render identically on every OS — Windows/Chrome don't draw flag emoji)
+    const FLAG = {
+      gb:'<rect width="24" height="18" fill="#012169"/><path d="M0,0 24,18 M24,0 0,18" stroke="#fff" stroke-width="3.6"/><path d="M0,0 24,18 M24,0 0,18" stroke="#C8102E" stroke-width="1.8"/><rect x="9.6" width="4.8" height="18" fill="#fff"/><rect y="6.6" width="24" height="4.8" fill="#fff"/><rect x="10.8" width="2.4" height="18" fill="#C8102E"/><rect y="7.8" width="24" height="2.4" fill="#C8102E"/>',
+      jp:'<rect width="24" height="18" fill="#fff"/><circle cx="12" cy="9" r="5" fill="#BC002D"/>',
+      kr:'<rect width="24" height="18" fill="#fff"/><path d="M12,4.5a4.5,4.5 0 0 1 0,9a2.25,2.25 0 0 1 0,-4.5a2.25,2.25 0 0 0 0,-4.5z" fill="#CD2E3A"/><path d="M12,4.5a4.5,4.5 0 0 0 0,9a2.25,2.25 0 0 0 0,-4.5a2.25,2.25 0 0 1 0,-4.5z" fill="#0047A0"/>',
+      cn:'<rect width="24" height="18" fill="#DE2910"/><path d="M6,3.2 6.8,5.6 9.3,5.6 7.3,7.1 8,9.5 6,8 4,9.5 4.7,7.1 2.7,5.6 5.2,5.6z" fill="#FFDE00"/>',
+      br:'<rect width="24" height="18" fill="#009B3A"/><path d="M12,2 22,9 12,16 2,9z" fill="#FEDF00"/><circle cx="12" cy="9" r="3.1" fill="#002776"/>',
+      es:'<rect width="24" height="18" fill="#AA151B"/><rect y="4.5" width="24" height="9" fill="#F1BF00"/>',
+      it:'<rect width="24" height="18" fill="#fff"/><rect width="8" height="18" fill="#009246"/><rect x="16" width="8" height="18" fill="#CE2B37"/>',
+      fr:'<rect width="24" height="18" fill="#fff"/><rect width="8" height="18" fill="#0055A4"/><rect x="16" width="8" height="18" fill="#EF4135"/>',
+      nl:'<rect width="24" height="18" fill="#fff"/><rect width="24" height="6" fill="#AE1C28"/><rect y="12" width="24" height="6" fill="#21468B"/>',
+      de:'<rect width="24" height="18" fill="#000"/><rect y="6" width="24" height="6" fill="#DD0000"/><rect y="12" width="24" height="6" fill="#FFCE00"/>',
+      ru:'<rect width="24" height="18" fill="#fff"/><rect y="6" width="24" height="6" fill="#0039A6"/><rect y="12" width="24" height="6" fill="#D52B1E"/>',
+      cz:'<rect width="24" height="18" fill="#fff"/><rect y="9" width="24" height="9" fill="#D7141A"/><path d="M0,0 11,9 0,18z" fill="#11457E"/>'
+    };
+    const LANG_CODE = { english:"gb", japanese:"jp", korean:"kr", mandarin:"cn", chinese:"cn", portuguese:"br", spanish:"es", italian:"it", french:"fr", dutch:"nl", german:"de", russian:"ru", czech:"cz" };
+    const flagSVG = code => (code && FLAG[code]) ? `<svg class="flag" viewBox="0 0 24 18" aria-hidden="true">${FLAG[code]}</svg>` : "";
+    function langParts(str){
+      if(!str) return [];
+      return str.split(",").map(s=>{
+        const t = s.trim();
+        const key = Object.keys(LANG_CODE).find(k => t.toLowerCase().includes(k));
+        return { code: key ? LANG_CODE[key] : null, label: t };
+      });
+    }
+    const langFlagsInline = str => langParts(str).map(p => `${flagSVG(p.code)} ${esc(p.label)}`.trim()).join(" &nbsp;·&nbsp; ");
+    const langFlagsOnly = str => langParts(str).map(p => flagSVG(p.code)).filter(Boolean).join(" ");
+
+    // Tenure medallions (5/10/15/20 years) — bronze / silver / gold / emerald
+    const TENURE = {
+      5:  { a:"#EBBC8C", b:"#B87333", ring:"#8A5424", fg:"#4a2c10" },
+      10: { a:"#EAEEF1", b:"#AAB2B9", ring:"#868F97", fg:"#3a4046" },
+      15: { a:"#FBD670", b:"#E3A81E", ring:"#B0810F", fg:"#5a3d00" },
+      20: { a:"#8FE6C9", b:"#12907C", ring:"#0b6152", fg:"#053a30" }
+    };
+    function tenureBadge(years, size){
+      const t = TENURE[years]; if(!t) return "";
+      const s = size || 52, id = `tg${years}_${Math.random().toString(36).slice(2,7)}`;
+      return `<svg class="tenure-medal" viewBox="0 0 100 100" width="${s}" height="${s}" role="img" aria-label="${years} years at Lexis">
+        <defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.a}"/><stop offset="1" stop-color="${t.b}"/></linearGradient></defs>
+        <circle cx="50" cy="50" r="46" fill="url(#${id})" stroke="${t.ring}" stroke-width="3"/>
+        <circle cx="50" cy="50" r="39" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.4"/>
+        <text x="50" y="30" text-anchor="middle" font-size="13" fill="${t.fg}">★</text>
+        <text x="50" y="60" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="30" fill="${t.fg}">${years}</text>
+        <text x="50" y="76" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="600" font-size="11" letter-spacing="1.2" fill="${t.fg}">YEARS</text>
+      </svg>`;
+    }
+
+    // Modal photo: portrait framed 4:5 inside a faint campus-tinted panel (no over-zoom)
+    function modalPhotoHTML(p, col){
+      const inner = p.photo
+        ? `<img src="assets/${p.photo}" alt="${esc(p.name)}" />`
+        : `<div class="avatar" style="background:${grad(CAMPUS_COLOR[p.campus]||'#F59120')}">${initials(p)}</div>`;
+      return `<div class="m-photo" style="background:linear-gradient(160deg, ${col}1f, ${col}08)"><div class="frame">${inner}</div></div>`;
+    }
     const people = window.PEOPLE || [];
     let activeCampus = "All";
     let query = "";
@@ -273,12 +338,14 @@
         return `<button class="card" data-slug="${esc(p.slug)}" aria-label="View profile for ${esc(p.name)}">
           <div class="photo">
             <span class="cbadge"><span class="cdot" style="background:${col}"></span>${esc(p.campus)}</span>
+            ${p.years ? `<span class="tenure-card">${tenureBadge(p.years, 44)}</span>` : ""}
             ${photoHTML(p)}
           </div>
           <div class="card-body">
             <h3 class="card-name osw">${esc(p.name)}</h3>
             <p class="card-role">${esc(p.role)}</p>
             ${(p.hometown || p.campusLabel) ? `<p class="card-home">📍 ${esc(p.hometown || p.campusLabel)}</p>` : ""}
+            ${p.languages ? `<p class="card-langs" title="${esc(p.languages)}">${langFlagsOnly(p.languages)}</p>` : ""}
           </div>
         </button>`;
       }).join("");
@@ -293,20 +360,21 @@
       const p = people.find(x=>x.slug===slug); if(!p) return;
       const col = CAMPUS_COLOR[p.campus]||"#F59120";
       const meta = [
-        [isTeam(p.campus) ? "Team" : "Campus", p.campus],
-        p.dept ? ["Department", p.dept] : null,
-        p.campusLabel ? ["Based", p.campusLabel] : null,
-        p.languages ? ["Speaks", p.languages] : null,
-        p.hometown ? ["Hometown", p.hometown] : null,
-        p.since ? ["In Australia", p.since] : null
+        [isTeam(p.campus) ? "Team" : "Campus", esc(p.campus)],
+        p.dept ? ["Department", esc(p.dept)] : null,
+        p.campusLabel ? ["Based", esc(p.campusLabel)] : null,
+        p.languages ? ["Speaks", langFlagsInline(p.languages)] : null,
+        p.hometown ? ["Hometown", esc(p.hometown)] : null,
+        p.since ? ["In Australia", esc(p.since)] : null
       ].filter(Boolean);
       document.getElementById("modal").innerHTML = `
         <button class="m-close" id="m-close" aria-label="Close">&times;</button>
-        <div class="m-photo">${photoHTML(p)}</div>
+        ${modalPhotoHTML(p, col)}
         <div class="m-body">
           <h2 class="m-name osw" id="m-name">${esc(p.name)}</h2>
           <p class="m-role">${esc(p.role)} · <span style="color:${col}">${esc(p.campus)}</span></p>
-          <div class="m-meta">${meta.map(([k,v])=>`<span class="tag"><b>${esc(k)}</b> ${esc(v)}</span>`).join("")}</div>
+          ${p.years ? `<div class="m-tenure">${tenureBadge(p.years, 56)}<span>${p.years} Years at Lexis<small>Thank you for your service</small></span></div>` : ""}
+          <div class="m-meta">${meta.map(([k,v])=>`<span class="tag"><b>${esc(k)}</b> ${v}</span>`).join("")}</div>
           ${p.bio ? `<p class="m-bio">${esc(p.bio)}</p>` : ""}
           ${p.q1 ? `<div class="qa">
             <div class="item"><p class="q"><span class="num">01</span> What do you do at Lexis?</p><p class="a">${esc(p.q1)}</p></div>
