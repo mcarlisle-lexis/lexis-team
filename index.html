@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet the Team · Lexis English</title>
+  <meta name="description" content="Meet the Lexis English team — the people who welcome and support students across our campuses in Sydney, Brisbane, Perth, Sunshine Coast, Byron Bay and Noosa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --orange:#F59120; --orange-dk:#d97b0d;
+      --ink:#1A1714; --ink-soft:#4a423b;
+      --paper:#FAF8F5; --card:#ffffff;
+      --line:#ece5dc; --muted:#8a8178;
+      --shadow:0 1px 2px rgba(26,23,20,.05), 0 8px 24px rgba(26,23,20,.07);
+      --shadow-lg:0 12px 40px rgba(26,23,20,.18);
+      --radius:18px;
+      --maxw:1240px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      background:var(--paper); color:var(--ink);
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      font-weight:400; line-height:1.55; -webkit-font-smoothing:antialiased;
+    }
+    .osw{font-family:"Oswald",sans-serif}
+    a{color:inherit}
+
+    /* ---------- Header ---------- */
+    header.hero{
+      background:
+        radial-gradient(1200px 400px at 80% -10%, rgba(245,145,32,.16), transparent 60%),
+        linear-gradient(180deg,#fff, var(--paper));
+      border-bottom:1px solid var(--line);
+      padding:34px 20px 30px;
+    }
+    .hero-inner{max-width:var(--maxw); margin:0 auto}
+    .brand{display:flex; align-items:center; gap:12px; margin-bottom:22px}
+    .brand .mark{
+      font-family:"Oswald",sans-serif; font-weight:700; letter-spacing:.14em;
+      font-size:15px; text-transform:uppercase; color:var(--ink);
+      display:flex; align-items:center; gap:9px;
+    }
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(245,145,32,.18)}
+    h1{
+      font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;
+      letter-spacing:.02em; line-height:.98; margin:0;
+      font-size:clamp(34px,6.4vw,66px);
+    }
+    h1 .amp{color:var(--orange)}
+    .lede{
+      margin:14px 0 0; max-width:640px; color:var(--ink-soft);
+      font-size:clamp(15px,1.7vw,18px);
+    }
+
+    /* ---------- Controls ---------- */
+    .controls{
+      position:sticky; top:0; z-index:40;
+      background:rgba(250,248,245,.92); backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .controls-inner{max-width:var(--maxw); margin:0 auto; padding:14px 20px}
+    .search-wrap{position:relative; margin-bottom:12px}
+    .search-wrap svg{position:absolute; left:15px; top:50%; transform:translateY(-50%); color:var(--muted)}
+    #search{
+      width:100%; padding:13px 16px 13px 44px; font-size:15px; font-family:inherit;
+      border:1.5px solid var(--line); border-radius:12px; background:#fff; color:var(--ink);
+      transition:border-color .15s, box-shadow .15s;
+    }
+    #search:focus{outline:none; border-color:var(--orange); box-shadow:0 0 0 4px rgba(245,145,32,.14)}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+    .chip{
+      font-family:"Oswald",sans-serif; font-weight:500; letter-spacing:.03em;
+      font-size:13px; text-transform:uppercase;
+      padding:8px 14px; border-radius:999px; cursor:pointer;
+      border:1.5px solid var(--line); background:#fff; color:var(--ink-soft);
+      transition:all .15s; white-space:nowrap;
+    }
+    .chip:hover{border-color:var(--orange); color:var(--ink)}
+    .chip[aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:#fff}
+    .chip .n{opacity:.55; margin-left:6px; font-size:11px}
+    .chip-sep{width:1px; height:24px; background:var(--line); margin:0 5px; flex:0 0 auto}
+    .count{margin-left:auto; color:var(--muted); font-size:13px; font-family:"Poppins"}
+
+    /* ---------- Grid ---------- */
+    main{max-width:var(--maxw); margin:0 auto; padding:26px 20px 60px}
+    .grid{
+      display:grid; gap:20px;
+      grid-template-columns:repeat(auto-fill,minmax(215px,1fr));
+    }
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+      overflow:hidden; cursor:pointer; text-align:left; padding:0; font-family:inherit; color:inherit;
+      box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .18s ease, border-color .18s;
+      display:flex; flex-direction:column;
+    }
+    .card:hover{transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:#e0d6c9}
+    .card:focus-visible{outline:3px solid var(--orange); outline-offset:2px}
+    .photo{position:relative; aspect-ratio:4/5; overflow:hidden; background:#efe9e1}
+    .photo img{width:100%; height:100%; object-fit:cover; display:block}
+    .card:hover .photo img{transform:scale(1.04)}
+    .photo img{transition:transform .35s ease}
+    .avatar{
+      width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+      font-family:"Oswald",sans-serif; font-weight:600; color:#fff; font-size:54px; letter-spacing:.02em;
+    }
+    .cbadge{
+      position:absolute; left:10px; top:10px; z-index:2;
+      font-family:"Oswald",sans-serif; font-weight:500; letter-spacing:.05em; text-transform:uppercase;
+      font-size:11px; color:#fff; padding:5px 10px; border-radius:999px;
+      background:rgba(26,23,20,.62); backdrop-filter:blur(4px);
+      display:flex; align-items:center; gap:6px;
+    }
+    .cbadge .cdot{width:7px;height:7px;border-radius:50%}
+    .card-body{padding:14px 15px 16px}
+    .card-name{font-family:"Oswald",sans-serif; font-weight:600; font-size:20px; line-height:1.05; margin:0}
+    .card-role{color:var(--ink-soft); font-size:13px; margin:5px 0 0; line-height:1.35}
+    .card-home{color:var(--muted); font-size:12px; margin:9px 0 0; display:flex; align-items:center; gap:5px}
+
+    .empty{text-align:center; padding:70px 20px; color:var(--muted)}
+    .empty .osw{font-size:26px; color:var(--ink); display:block; margin-bottom:6px}
+
+    /* ---------- Modal ---------- */
+    .overlay{
+      position:fixed; inset:0; z-index:100; display:none;
+      background:rgba(26,23,20,.55); backdrop-filter:blur(3px);
+      padding:20px; overflow-y:auto;
+    }
+    .overlay.open{display:flex; align-items:flex-start; justify-content:center}
+    .modal{
+      background:var(--card); border-radius:22px; max-width:860px; width:100%;
+      margin:auto; box-shadow:var(--shadow-lg); overflow:hidden;
+      display:grid; grid-template-columns:300px 1fr;
+      animation:pop .22s ease;
+    }
+    @keyframes pop{from{opacity:0; transform:translateY(14px) scale(.98)}to{opacity:1; transform:none}}
+    .m-photo{position:relative; background:#efe9e1; min-height:360px}
+    .m-photo img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0}
+    .m-photo .avatar{position:absolute; inset:0; font-size:90px}
+    .m-body{padding:28px 30px 30px; min-width:0}
+    .m-close{
+      position:absolute; right:16px; top:16px; z-index:10;
+      width:38px; height:38px; border-radius:50%; border:none; cursor:pointer;
+      background:rgba(255,255,255,.92); color:var(--ink); font-size:20px; line-height:1;
+      display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow);
+    }
+    .m-close:hover{background:#fff; transform:scale(1.05)}
+    .m-name{font-family:"Oswald",sans-serif; font-weight:600; font-size:clamp(28px,4vw,40px); line-height:1; margin:0}
+    .m-role{color:var(--orange-dk); font-weight:600; font-size:15px; margin:8px 0 0}
+    .m-meta{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0}
+    .m-meta .tag{
+      font-size:12.5px; color:var(--ink-soft); background:var(--paper);
+      border:1px solid var(--line); border-radius:999px; padding:6px 12px;
+      display:flex; align-items:center; gap:6px;
+    }
+    .m-meta .tag b{font-weight:600; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.04em}
+    .m-bio{margin:20px 0 0; color:var(--ink-soft); font-size:15px}
+    .qa{margin-top:22px; border-top:1px solid var(--line); padding-top:6px}
+    .qa .item{padding:16px 0; border-bottom:1px solid var(--line)}
+    .qa .item:last-child{border-bottom:none}
+    .qa .q{font-family:"Oswald",sans-serif; font-weight:500; text-transform:uppercase; letter-spacing:.03em;
+      font-size:13px; color:var(--ink); margin:0 0 7px; display:flex; gap:9px; align-items:baseline}
+    .qa .q .num{color:var(--orange); font-weight:700}
+    .qa .a{margin:0; color:var(--ink-soft); font-size:14.5px; font-style:italic}
+
+    footer{border-top:1px solid var(--line); background:#fff}
+    .foot-inner{max-width:var(--maxw); margin:0 auto; padding:24px 20px; color:var(--muted); font-size:13px;
+      display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; justify-content:space-between}
+    .foot-inner .mark{font-family:"Oswald",sans-serif; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink); font-size:13px}
+
+    @media (max-width:640px){
+      .modal{grid-template-columns:1fr}
+      .m-photo{min-height:300px; aspect-ratio:4/3}
+      .m-body{padding:22px 20px 26px}
+      .count{width:100%; margin:4px 0 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand"><span class="mark"><span class="dot"></span>Lexis English</span></div>
+      <h1 class="osw">Meet the <span class="amp">Team</span></h1>
+      <p class="lede">The friendly faces behind every Lexis campus — the people who help you choose a course, settle in, find a home and make the most of your time in Australia. Filter by campus or team, or search for a name, role or hometown.</p>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="controls-inner">
+      <div class="search-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="search" type="search" placeholder="Search by name, role, campus, language or hometown…" autocomplete="off" aria-label="Search team members" />
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by campus"></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <span class="osw">No one matches that</span>
+      Try a different campus or clear your search.
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <span class="mark"><span style="color:var(--orange)">●</span> Lexis English</span>
+      <span id="footcount"></span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="m-name">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <script src="people.js"></script>
+  <script>
+    // Campus + team groups, with accent colours (used for chips, badges & avatars)
+    const CAMPUS_ORDER = ["Sydney","Brisbane","Perth","Sunshine Coast","Byron Bay","Noosa"];
+    const TEAM_ORDER = ["Head Office"];
+    const CAMPUS_COLOR = {
+      "Sydney":"#2E86AB", "Brisbane":"#F59120", "Perth":"#C1436D",
+      "Sunshine Coast":"#E0A020", "Byron Bay":"#2FA98B", "Noosa":"#7A6FB0",
+      "Head Office":"#5B6CF0"
+    };
+    const isTeam = c => TEAM_ORDER.includes(c);
+    const people = window.PEOPLE || [];
+    let activeCampus = "All";
+    let query = "";
+
+    const initials = p => p.name.split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
+    const esc = s => (s==null?"":String(s)).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const grad = c => `linear-gradient(145deg, ${c}, ${shade(c,-28)})`;
+    function shade(hex,amt){let n=parseInt(hex.slice(1),16);let r=Math.max(0,Math.min(255,(n>>16)+amt));let g=Math.max(0,Math.min(255,((n>>8)&255)+amt));let b=Math.max(0,Math.min(255,(n&255)+amt));return `rgb(${r},${g},${b})`;}
+
+    // Build filter chips: All · campuses · | · teams
+    const counts = {};
+    people.forEach(p=>counts[p.campus]=(counts[p.campus]||0)+1);
+    const chipsEl = document.getElementById("chips");
+    function chipHTML(c,n){
+      const col = c==="All" ? "var(--orange)" : CAMPUS_COLOR[c];
+      const dot = c==="All" ? "" : `<span class="cdot" style="width:8px;height:8px;border-radius:50%;display:inline-block;background:${col};margin-right:2px"></span>`;
+      return `<button class="chip" data-campus="${esc(c)}" aria-pressed="${c==='All'}">${dot}${esc(c)}<span class="n">${n}</span></button>`;
+    }
+    let chipsHTML = chipHTML("All", people.length);
+    CAMPUS_ORDER.filter(c=>counts[c]).forEach(c=> chipsHTML += chipHTML(c, counts[c]));
+    const activeTeams = TEAM_ORDER.filter(c=>counts[c]);
+    if(activeTeams.length){
+      chipsHTML += `<span class="chip-sep" aria-hidden="true"></span>`;
+      activeTeams.forEach(c=> chipsHTML += chipHTML(c, counts[c]));
+    }
+    chipsEl.innerHTML = chipsHTML + `<span class="count" id="count"></span>`;
+
+    function photoHTML(p, cls){
+      if(p.photo) return `<img src="assets/${p.photo}" alt="${esc(p.name)}" loading="lazy" />`;
+      return `<div class="avatar ${cls||''}" style="background:${grad(CAMPUS_COLOR[p.campus]||'#F59120')}">${initials(p)}</div>`;
+    }
+
+    function render(){
+      const q = query.trim().toLowerCase();
+      const list = people.filter(p=>{
+        if(activeCampus!=="All" && p.campus!==activeCampus) return false;
+        if(!q) return true;
+        return [p.name,p.role,p.campus,p.dept,p.campusLabel,p.hometown,p.languages,p.bio].join(" ").toLowerCase().includes(q);
+      });
+      const grid = document.getElementById("grid");
+      grid.innerHTML = list.map((p,i)=>{
+        const col = CAMPUS_COLOR[p.campus]||"#F59120";
+        return `<button class="card" data-slug="${esc(p.slug)}" aria-label="View profile for ${esc(p.name)}">
+          <div class="photo">
+            <span class="cbadge"><span class="cdot" style="background:${col}"></span>${esc(p.campus)}</span>
+            ${photoHTML(p)}
+          </div>
+          <div class="card-body">
+            <h3 class="card-name osw">${esc(p.name)}</h3>
+            <p class="card-role">${esc(p.role)}</p>
+            ${(p.hometown || p.campusLabel) ? `<p class="card-home">📍 ${esc(p.hometown || p.campusLabel)}</p>` : ""}
+          </div>
+        </button>`;
+      }).join("");
+      document.getElementById("empty").hidden = list.length>0;
+      const label = activeCampus==="All" ? "team members" : activeCampus;
+      document.getElementById("count").textContent = `${list.length} ${activeCampus==="All"?"people":"in "+activeCampus}`;
+      const nc = CAMPUS_ORDER.filter(c=>counts[c]).length, nt = TEAM_ORDER.filter(c=>counts[c]).length;
+      document.getElementById("footcount").textContent = `${people.length} people · ${nc} campuses` + (nt ? ` · ${nt} team${nt!==1?'s':''}` : "");
+    }
+
+    function openModal(slug){
+      const p = people.find(x=>x.slug===slug); if(!p) return;
+      const col = CAMPUS_COLOR[p.campus]||"#F59120";
+      const meta = [
+        [isTeam(p.campus) ? "Team" : "Campus", p.campus],
+        p.dept ? ["Department", p.dept] : null,
+        p.campusLabel ? ["Based", p.campusLabel] : null,
+        p.languages ? ["Speaks", p.languages] : null,
+        p.hometown ? ["Hometown", p.hometown] : null,
+        p.since ? ["In Australia", p.since] : null
+      ].filter(Boolean);
+      document.getElementById("modal").innerHTML = `
+        <button class="m-close" id="m-close" aria-label="Close">&times;</button>
+        <div class="m-photo">${photoHTML(p)}</div>
+        <div class="m-body">
+          <h2 class="m-name osw" id="m-name">${esc(p.name)}</h2>
+          <p class="m-role">${esc(p.role)} · <span style="color:${col}">${esc(p.campus)}</span></p>
+          <div class="m-meta">${meta.map(([k,v])=>`<span class="tag"><b>${esc(k)}</b> ${esc(v)}</span>`).join("")}</div>
+          ${p.bio ? `<p class="m-bio">${esc(p.bio)}</p>` : ""}
+          ${p.q1 ? `<div class="qa">
+            <div class="item"><p class="q"><span class="num">01</span> What do you do at Lexis?</p><p class="a">${esc(p.q1)}</p></div>
+            <div class="item"><p class="q"><span class="num">02</span> What should students know before they arrive?</p><p class="a">${esc(p.q2)}</p></div>
+            <div class="item"><p class="q"><span class="num">03</span> What's your favourite thing about your campus?</p><p class="a">${esc(p.q3)}</p></div>
+          </div>` : (p.bio ? "" : `<p class="m-bio" style="color:var(--muted); font-style:italic">Full profile coming soon.</p>`)}
+        </div>`;
+      const ov = document.getElementById("overlay");
+      ov.classList.add("open"); document.body.style.overflow="hidden";
+      document.getElementById("m-close").focus();
+      document.getElementById("m-close").onclick = closeModal;
+    }
+    function closeModal(){
+      document.getElementById("overlay").classList.remove("open");
+      document.body.style.overflow="";
+    }
+
+    // Events
+    chipsEl.addEventListener("click", e=>{
+      const b = e.target.closest(".chip"); if(!b) return;
+      activeCampus = b.dataset.campus;
+      chipsEl.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", c===b));
+      render();
+    });
+    document.getElementById("grid").addEventListener("click", e=>{
+      const c = e.target.closest(".card"); if(c) openModal(c.dataset.slug);
+    });
+    document.getElementById("search").addEventListener("input", e=>{ query=e.target.value; render(); });
+    document.getElementById("overlay").addEventListener("click", e=>{ if(e.target.id==="overlay") closeModal(); });
+    document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeModal(); });
+
+    render();
+  </script>
+</body>
+</html>
