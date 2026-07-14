@@ -241,6 +241,15 @@
     // Inline SVG flags (render identically on every OS — Windows/Chrome don't draw flag emoji)
     const starPts = (cx,cy,ro,spikes) => { const ri=ro*0.4, step=Math.PI/spikes; let d="M", rot=-Math.PI/2; for(let i=0;i<spikes*2;i++){ const r=i%2?ri:ro; d+=(cx+Math.cos(rot)*r).toFixed(2)+","+(cy+Math.sin(rot)*r).toFixed(2)+" "; rot+=step; } return d+"Z"; };
     const star = (cx,cy,ro,spikes) => `<path d="${starPts(cx,cy,ro,spikes||5)}" fill="#fff"/>`;
+    // Korean trigram (3 bars; 1=solid, 0=broken), rotated toward the flag centre
+    const trigram = (cx,cy,rot,bits) => {
+      const L=3.4, bh=0.62, vg=1.05, brk=0.9, seg=(L-brk)/2; let bars="";
+      bits.forEach((b,i)=>{ const y=(cy+(i-1)*vg-bh/2).toFixed(2);
+        if(b) bars += `<rect x="${(cx-L/2).toFixed(2)}" y="${y}" width="${L}" height="${bh}"/>`;
+        else  bars += `<rect x="${(cx-L/2).toFixed(2)}" y="${y}" width="${seg}" height="${bh}"/><rect x="${(cx+brk/2).toFixed(2)}" y="${y}" width="${seg}" height="${bh}"/>`;
+      });
+      return `<g fill="#0A0A0A" transform="rotate(${rot} ${cx} ${cy})">${bars}</g>`;
+    };
     const FLAG = {
       gb:'<rect width="24" height="18" fill="#012169"/><path d="M0,0 24,18 M24,0 0,18" stroke="#fff" stroke-width="3.6"/><path d="M0,0 24,18 M24,0 0,18" stroke="#C8102E" stroke-width="1.8"/><rect x="9.6" width="4.8" height="18" fill="#fff"/><rect y="6.6" width="24" height="4.8" fill="#fff"/><rect x="10.8" width="2.4" height="18" fill="#C8102E"/><rect y="7.8" width="24" height="2.4" fill="#C8102E"/>',
       jp:'<rect width="24" height="18" fill="#fff"/><circle cx="12" cy="9" r="5" fill="#BC002D"/>',
@@ -260,6 +269,14 @@
       + '<svg x="0" y="0" width="12" height="9" viewBox="0 0 24 18">' + FLAG.gb + '</svg>'
       + star(6, 13.4, 2.4, 7)
       + star(18, 4, 1.15) + star(13.8, 9.4, 1.15) + star(21.6, 8, 1.05) + star(18, 15, 1.25) + star(18.7, 11, 0.6);
+    // South Korean flag (Taegukgi): white field + taeguk + four trigrams
+    FLAG.kr = '<rect width="24" height="18" fill="#fff"/>'
+      + '<circle cx="12" cy="9" r="4.2" fill="#0047A0"/>'
+      + '<path d="M7.8,9 a4.2,4.2 0 0 1 8.4,0 a2.1,2.1 0 0 1 -4.2,0 a2.1,2.1 0 0 0 -4.2,0 z" fill="#CD2E3A"/>'
+      + trigram(5, 4.4, 33.7, [1,1,1])   // Geon (top-left)
+      + trigram(19, 13.6, 33.7, [0,0,0]) // Gon (bottom-right)
+      + trigram(19, 4.4, -33.7, [0,1,0]) // Gam (top-right)
+      + trigram(5, 13.6, -33.7, [1,0,1]);// Ri (bottom-left)
     const LANG_CODE = { english:"au", japanese:"jp", korean:"kr", mandarin:"cn", chinese:"cn", portuguese:"br", spanish:"es", italian:"it", french:"fr", dutch:"nl", german:"de", russian:"ru", czech:"cz" };
     const flagSVG = code => (code && FLAG[code]) ? `<svg class="flag" viewBox="0 0 24 18" aria-hidden="true">${FLAG[code]}</svg>` : "";
     function langParts(str){

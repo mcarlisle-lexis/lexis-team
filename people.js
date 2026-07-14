@@ -60,10 +60,12 @@ window.PEOPLE = [
     q1: ``, q2: ``, q3: ``
   },
   {
-    slug: "chris-orvis", name: "Chris Orvis", role: "Operations Manager",
-    campus: "Head Office", photo: null,
-    bio: ``,
-    q1: ``, q2: ``, q3: ``
+    slug: "chris-orvis", name: "Chris Orvis", role: "Academic Operations Manager",
+    campus: "Head Office", campusLabel: "All campuses", languages: "English, some Japanese", hometown: "Scanterbury, Manitoba, Canada", since: "2006", photo: "chris-orvis.jpg",
+    bio: `I've been with Lexis for eight years in a few different roles, supporting students and academic teams across our campuses. I love the energy and diversity of our Brisbane campus. Outside work, I enjoy golfing and fishing.`,
+    q1: `I work with our academic teams across Australia to make sure you have the best possible experience while studying at Lexis. My role is to support our teachers and campuses so we can help you achieve your English goals and prepare for whatever comes next.`,
+    q2: `Don't worry if you're nervous on your first day — almost everyone feels the same! Be open to speaking English, getting involved in activities, and making friends from different countries. The more you say "yes" to new experiences, the more you'll get out of your time at Lexis.`,
+    q3: `My favourite thing about Lexis is seeing students grow in confidence and achieve goals they never thought were possible. It's incredibly rewarding to be part of that journey while working with passionate teams who genuinely care about our students.`
   },
   {
     slug: "jason-knapp", name: "Jason Knapp", role: "Marketing Director",
@@ -213,9 +215,11 @@ window.PEOPLE = [
   },
   {
     slug: "lucinda-seefeld", name: "Lucinda Seefeld", role: "Accommodation Co-ordinator",
-    campus: "Sunshine Coast", photo: null,
-    bio: ``,
-    q1: ``, q2: ``, q3: ``
+    campus: "Sunshine Coast", languages: "English", hometown: "Buderim, QLD, Australia", since: "1975", photo: "lucinda-seefeld.jpg",
+    bio: `Lucinda has been at Lexis for four years and arranges accommodation for students, either with host families or in our student houses. She loves the beautiful ocean views from the campus and the friendly staff and students. Regular yoga and swimming help her wind down after work.`,
+    q1: `I match students' accommodation requests with local host families. I also organise the rooms for students who'd like to stay in our nearby student houses.`,
+    q2: `Living with a host family is a great way to learn about Australian culture and develop your English skills.`,
+    q3: `The stunning river and ocean views all around the Sunshine Coast — especially from the top of Mount Coolum!`
   },
   {
     slug: "melina-treichel", name: "Melina Treichel", role: "Accommodation Co-ordinator",
