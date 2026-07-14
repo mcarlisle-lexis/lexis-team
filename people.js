@@ -156,7 +156,7 @@ window.PEOPLE = [
     q3: `One of my favourite things about Perth is going to the beach and watching the ocean waves and the sky.`
   },
   {
-    slug: "maiko", name: "Maiko", role: "Student Services",
+    slug: "maiko", name: "Maiko Livingstone", role: "Student Services",
     campus: "Perth", languages: "Japanese, English", hometown: "Tokyo, Japan", since: "2010", photo: "maiko.jpg",
     bio: `I'm part of the Student Services team at Lexis, and I joined in 2022. I've always wanted to help students from all over the world feel happy, supported and welcome while studying in Australia. I'm here to make your student life easier by answering your questions, helping you settle in, and encouraging you to enjoy new experiences during your time at Lexis. A little about me: I enjoy trying new recipes and cooking dishes from different countries, and I love watching sport — especially soccer — with my family.`,
     q1: `I support students throughout their journey at Lexis, from arrival to graduation, by helping with administration, daily operations, activities and payments. Most importantly, I make sure students feel welcomed, supported and comfortable by being someone they can rely on.`,
