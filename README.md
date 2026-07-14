@@ -12,15 +12,15 @@ lexis-team/
   README.md
 ```
 
-## View it
+## Live
+**https://mcarlisle-lexis.github.io/lexis-team/** — GitHub Pages, repo `mcarlisle-lexis/lexis-team`
+(branch `master`, root). To update: edit files, `git commit`, `git push`; Pages rebuilds in ~1 min.
+
+## View locally
 Just open `index.html` in a browser, or serve the folder:
 ```bash
 npx serve lexis-team -l 4141      # http://localhost:4141
 ```
-
-## Host it (like the FAQ site → GitHub Pages)
-Push the `lexis-team/` contents to a GitHub Pages repo (or any static host). Everything is
-relative-pathed, so it works from a subfolder too.
 
 ## Features
 - 25 staff across 6 campuses (Sydney, Brisbane, Perth, Sunshine Coast, Byron Bay, Noosa) plus a
