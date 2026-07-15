@@ -86,7 +86,7 @@ window.PEOPLE = [
   {
     slug: "wakako-yamaguchi", name: "Wakako Yamaguchi", role: "Sales & Marketing Manager",
     campus: "Head Office", dept: "Marketing", campusLabel: "All campuses",
-    languages: "Japanese, English", hometown: "Iwate, Japan", since: "2007", photo: null,
+    languages: "Japanese, English", hometown: "Iwate, Japan", since: "2007", photo: "wakako-yamaguchi.jpg",
     bio: `I've been with Lexis English for over 15 years, working in recruitment and marketing to help Japanese students make their study experience in Australia truly worthwhile. I love our Manly campus because you can enjoy beautiful ocean views from the terrace and still reach Sydney city in just 20 minutes. I also love relaxing at the beach.`,
     q1: `Most of my work is with our education agents in Japan, helping them find the best options for their students. I also create marketing campaigns and help develop programs that Japanese students will enjoy and benefit from while studying in Australia.`,
     q2: `If you come to Manly in winter, you might even be lucky enough to spot whales from our campus terrace. It's one of those unforgettable experiences that makes studying here so special, so don't forget to take a break and enjoy the view.`,
