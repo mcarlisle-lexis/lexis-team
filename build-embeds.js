@@ -112,7 +112,8 @@ function embedFor(campus, members, opts={}){
 </section>`;
 }
 
-const membersFor = campus => PEOPLE.filter(p => p.campus===campus || (p.campus==='Head Office' && p.campusLabel===campus));
+// Campus pages show only that campus's own staff — Head Office people live on the Head Office section.
+const membersFor = campus => PEOPLE.filter(p => p.campus===campus);
 
 const CAMPUSES = ["Brisbane","Sydney","Perth","Sunshine Coast","Byron Bay","Noosa"];
 const slug = s => s.toLowerCase().replace(/\s+/g,'-');
