@@ -222,10 +222,12 @@ window.PEOPLE = [
     q3: `The stunning river and ocean views all around the Sunshine Coast — especially from the top of Mount Coolum!`
   },
   {
-    slug: "melina-treichel", name: "Melina Treichel", role: "Accommodation Co-ordinator",
-    campus: "Sydney", photo: null,
-    bio: ``,
-    q1: ``, q2: ``, q3: ``
+    slug: "melina-treichel", name: "Melina Treichel", role: "Accommodation Coordinator",
+    campus: "Sydney", languages: "German, English", hometown: "Bremen, Germany — by choice, Newport, Australia", since: "2021", photo: "melina-treichel.jpg",
+    bio: `After doing an exchange year in Sydney back in 2009, I fell in love with the lifestyle, attitude and endless opportunities here. Having been a homestay student myself — and having found my Australian family, who are still part of my life 16 years later — I'm now able to pass on that same experience to students at Lexis Manly, by finding the perfect host family for each student and their individual preferences.`,
+    q1: `I coordinate homestays at Lexis Manly. Students who want to embrace the Australian lifestyle beyond the classroom might want to stay with a local family during their time in Sydney — it's not only great for your language journey, it also lets you experience the Northern Beaches like a true local.`,
+    q2: `You won't be alone! While you're taking on a big adventure by yourself, which can come with mixed feelings of excitement and nervousness, you'll find that as soon as you start your Lexis journey you're surrounded by people in the same position — all excited to meet you and explore together.`,
+    q3: `A beach for every occasion: Manly Beach for the sunrise, Manly Wharf for a sundowner, Palm Beach for a hike, Bungan Beach for solitude, Shelly Beach for a BBQ. Whatever you're looking for, Sydney's Northern Beaches have a designated beach for it.`
   },
   {
     slug: "issi-daniels", name: "Issi Daniels", role: "Student Services & Activity Coordinator",
