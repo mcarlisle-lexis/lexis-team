@@ -47,7 +47,7 @@ window.PEOPLE = [
   },
   {
     slug: "ian-pratt", name: "Ian Pratt", role: "Managing Director",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Noosa", languages: "English, Japanese", hometown: "Canberra, Australia", since: "Born here", years: 20, photo: "ian-pratt.jpg",
+    campus: "Head Office", dept: "Marketing", languages: "English, Japanese", hometown: "Canberra, Australia", since: "Born here", photo: "ian-pratt.jpg",
     bio: `After living overseas as international students, my wife and I started Lexis back in 2004. We're incredibly lucky that we've been able to spend our lives doing a job that we're absolutely passionate about.`,
     q1: `I work with a great team at Lexis to run our operations in Australia! I have a great job — I work with a wonderful team, I meet students from all over the world, and I get to travel to amazing places!`,
     q2: `I'm not meant to have a favourite school, but there's something very special about Noosa. No matter where you're from, you can become part of the community here. Slow down and enjoy a completely different lifestyle while you study!`,
@@ -61,7 +61,7 @@ window.PEOPLE = [
   },
   {
     slug: "chris-orvis", name: "Chris Orvis", role: "Academic Operations Manager",
-    campus: "Head Office", campusLabel: "All campuses", languages: "English, some Japanese", hometown: "Scanterbury, Manitoba, Canada", since: "2006", photo: "chris-orvis.jpg",
+    campus: "Head Office", languages: "English, some Japanese", hometown: "Scanterbury, Manitoba, Canada", since: "2006", photo: "chris-orvis.jpg",
     bio: `I've been with Lexis for eight years in a few different roles, supporting students and academic teams across our campuses. I love the energy and diversity of our Brisbane campus. Outside work, I enjoy golfing and fishing.`,
     q1: `I work with our academic teams across Australia to make sure you have the best possible experience while studying at Lexis. My role is to support our teachers and campuses so we can help you achieve your English goals and prepare for whatever comes next.`,
     q2: `Don't worry if you're nervous on your first day — almost everyone feels the same! Be open to speaking English, getting involved in activities, and making friends from different countries. The more you say "yes" to new experiences, the more you'll get out of your time at Lexis.`,
@@ -69,7 +69,7 @@ window.PEOPLE = [
   },
   {
     slug: "jason-knapp", name: "Jason Knapp", role: "Marketing Director",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Noosa", languages: "English", hometown: "Brisbane, Australia", since: "Since birth", years: 10, photo: "jason-knapp.jpg",
+    campus: "Head Office", dept: "Marketing", languages: "English", hometown: "Brisbane, Australia", since: "Since birth", photo: "jason-knapp.jpg",
     bio: `With a career spanning multiple Queensland universities, I've now called Lexis home for almost ten years — a journey that has connected me with students and education partners from over 50 countries. I divide my time between Brisbane and Noosa, and I'm a firm believer that Noosa's lifestyle is second to none. When I'm not working, you'll find me travelling the world, exploring new cities, sampling local cuisines and immersing myself in how people truly live.`,
     q1: `I help students choose the study plan and location that's the best fit for them across our schools. The right learning experience isn't just about the course — it's about life outside the classroom too. Matching students with the right experience is what I do best.`,
     q2: `Australian study life is all about cultural openness. Get out there, talk to the locals, hear their stories, and use what you learn in class to grow and connect.`,
@@ -77,7 +77,7 @@ window.PEOPLE = [
   },
   {
     slug: "jing-tsai", name: "Jing Tsai", role: "Country Manager — Taiwan",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Taiwan", languages: "Mandarin (native), English, Japanese", hometown: "Kaohsiung, Taiwan", since: "In Australia since 2010", photo: null,
+    campus: "Head Office", dept: "Marketing", languages: "Mandarin (native), English, Japanese", hometown: "Kaohsiung, Taiwan", since: "In Australia since 2010", photo: null,
     bio: `Jing is from Taiwan, a beautiful island famous for its stunning mountains, vibrant night markets and friendly people. With years of experience in international education, student counselling and market development, she is passionate about helping students achieve their study-abroad goals. At Lexis she works closely with education agents across Taiwan and supports students in finding the course and campus that best suit their aspirations. Passionate about travel, great food and exploring different cultures, Jing believes studying abroad is about much more than learning English — it's an opportunity to broaden your horizons, build confidence and create unforgettable life experiences.`,
     q1: `Having travelled to many countries myself, I know every great journey starts with the right plan. At Lexis, I help students choose the course, campus and destination that best suit their goals, so they can enjoy not only learning English but also discovering new cultures, building confidence and creating memories that last a lifetime.`,
     q2: `Bring your curiosity, not just your suitcase. The biggest surprises often happen outside the classroom — meeting people from different cultures, trying something new, and discovering that you're capable of more than you ever imagined. Those are the memories you'll take home with you.`,
@@ -85,7 +85,7 @@ window.PEOPLE = [
   },
   {
     slug: "wakako-yamaguchi", name: "Wakako Yamaguchi", role: "Sales & Marketing Manager",
-    campus: "Head Office", dept: "Marketing", campusLabel: "All campuses",
+    campus: "Head Office", dept: "Marketing",
     languages: "Japanese, English", hometown: "Iwate, Japan", since: "2007", photo: "wakako-yamaguchi.jpg",
     bio: `I've been with Lexis English for over 15 years, working in recruitment and marketing to help Japanese students make their study experience in Australia truly worthwhile. I love our Manly campus because you can enjoy beautiful ocean views from the terrace and still reach Sydney city in just 20 minutes. I also love relaxing at the beach.`,
     q1: `Most of my work is with our education agents in Japan, helping them find the best options for their students. I also create marketing campaigns and help develop programs that Japanese students will enjoy and benefit from while studying in Australia.`,
@@ -94,7 +94,7 @@ window.PEOPLE = [
   },
   {
     slug: "mike-carlisle", name: "Mike Carlisle", role: "Direct Marketing",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Brisbane", languages: "English", hometown: "Manchester, UK", since: "2018", years: 5, photo: "mike-carlisle.jpg",
+    campus: "Head Office", dept: "Marketing", languages: "English", hometown: "Manchester, UK", since: "2018", photo: "mike-carlisle.jpg",
     bio: `Manchester-born Mike has spent nearly 20 years in English language education across the UK, Ireland, New Zealand and Australia — from summer camps to universities — before making the move Down Under in 2018. At Lexis, he helps students find the right course and campus to get the most out of their time in Australia. Traded Manchester rain for Brisbane sunshine; kept the Oasis records.`,
     q1: `I made the same move our students make — left Manchester for Australia in 2018 — so I know exactly what the big questions feel like. Now I help students answer them: which course, which campus, city or beach town, so the Australia they get matches the Australia they imagined.`,
     q2: `There's no wrong Lexis campus, just different flavours — big-city energy in Sydney and Brisbane, or beach towns where your teacher surfs before class. Pick the Australia you want to live in.`,
@@ -102,7 +102,7 @@ window.PEOPLE = [
   },
   {
     slug: "nami-lee", name: "Nami Lee", role: "Graphic Designer",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Brisbane", languages: "English, Korean", hometown: "Seoul, South Korea", since: "2015", years: 15, photo: "nami-lee.jpg",
+    campus: "Head Office", dept: "Marketing", languages: "English, Korean", hometown: "Seoul, South Korea", since: "2015", photo: "nami-lee.jpg",
     bio: `Born in Seoul, Nami fell in love with Australia on a working holiday in 2015 and never left. As Lexis' graphic designer, she creates all the visual materials that help students navigate their journey.`,
     q1: `I handle everything design — from the Instagram videos you watch to the brochure you're reading right now! My job is to make everything at Lexis look beautiful and truly 'Lexi-fied', making it easier and more exciting for you to find us.`,
     q2: `Pack an open mind and a sense of adventure! Whichever Lexis campus you choose, you're going to absolutely fall in love with the Australian lifestyle from day one.`,
@@ -110,7 +110,7 @@ window.PEOPLE = [
   },
   {
     slug: "priscila-campos", name: "Priscila Campos", role: "Marketing Manager, Latin America",
-    campus: "Head Office", dept: "Marketing", campusLabel: "Offshore · Brazil",
+    campus: "Head Office", dept: "Marketing",
     languages: "English, Portuguese, Spanish", hometown: "São Paulo, Brazil", photo: "priscila-campos.jpg",
     bio: `I've been part of the Lexis team for almost five years, but my Lexis story actually started as a student, studying Cambridge English in Noosa. Today I support our Latin American agents with the tools and resources they need to help students choose Lexis. Noosa will always have a special place in my heart, and when I'm not working you'll usually find me enjoying Pilates and exploring new cafés.`,
     q1: `I'm the Business Development and Marketing Manager for Latin America. I work with our amazing agent partners across the region, supporting them with marketing, training, events, translations, and the tools they need to confidently introduce students to Lexis. Knowing that my work helps more Latin American students discover the opportunity to study, grow and experience life in Australia is what makes my role so rewarding.`,
@@ -175,7 +175,7 @@ window.PEOPLE = [
   },
   {
     slug: "fabiana-oppini", name: "Fabiana Oppini", role: "Registrar",
-    campus: "Head Office", dept: "Registrations", campusLabel: "Sunshine Coast", languages: "English, Italian, French", hometown: "Milan, Italy", since: "2014", photo: "fabiana-oppini.jpg",
+    campus: "Head Office", dept: "Registrations", languages: "English, Italian, French", hometown: "Milan, Italy", since: "2014", photo: "fabiana-oppini.jpg",
     bio: `Although I've only been part of the Lexis Maroochydore tribe for the past couple of months, I've worked in student services for several years, supporting students with enrolments and answering their questions before they begin their journey. Outside of work, you'll usually find me at the beach, on a bushwalk with my dog, playing tennis, or simply lost in a good book.`,
     q1: `I help students through the enrolment process, making sure everything is ready before they start their course at Lexis. I'm here to answer questions, guide them through the paperwork, and make the process as smooth and stress-free as possible.`,
     q2: `Be warned… once you arrive in Maroochydore, you might not want to leave! With plenty of beautiful beaches, a relaxed lifestyle and friendly people, it's easy to fall in love with the Sunshine Coast. Very important… don't forget your sunscreen!`,
@@ -183,7 +183,7 @@ window.PEOPLE = [
   },
   {
     slug: "marli-rocker", name: "Marli Rocker", role: "Registrations Supervisor",
-    campus: "Head Office", dept: "Registrations", campusLabel: "Sunshine Coast", languages: "English", hometown: "Sunshine Coast, QLD", since: "Since birth", photo: "marli-rocker.jpg",
+    campus: "Head Office", dept: "Registrations", languages: "English", hometown: "Sunshine Coast, QLD", since: "Since birth", photo: "marli-rocker.jpg",
     bio: `Marli has grown up on the Sunshine Coast and is in her second tenure with Lexis, lasting over 10 years. With a background in marketing and administration, Marli oversees the Registrations Team and assists students with finalising their enrolments and studies abroad.`,
     q1: `The Registrations Team process enrolments and become a vital part of making students' travel dreams become a reality.`,
     q2: `Lexis has a campus location to suit everyone's needs, giving students the opportunity to enjoy more than one location to maximise their experience in Australia. Combine a beach stay with a city stay, and get the most from your time abroad.`,
@@ -191,7 +191,7 @@ window.PEOPLE = [
   },
   {
     slug: "mika-wilson", name: "Mika Wilson", role: "Registrar",
-    campus: "Head Office", dept: "Registrations", campusLabel: "Sunshine Coast", languages: "Japanese, English", hometown: "Tokyo, Japan", since: "2023", photo: "mika-wilson.jpg",
+    campus: "Head Office", dept: "Registrations", languages: "Japanese, English", hometown: "Tokyo, Japan", since: "2023", photo: "mika-wilson.jpg",
     bio: `Mika joined Lexis in 2026 as a Registrar, supporting students throughout their enrolment journey. Originally from Tokyo, she moved to New Zealand in 2015 and worked as an education agent helping international students settle into local schools. She moved to Australia in 2023 and enjoys gardening and beach time.`,
     q1: `As a Registrar, I help students get ready for their studies at Lexis. I process enrolments, make sure students are enrolled in the right course, and provide all the important documents they need before they arrive. My goal is to make the enrolment process as smooth and stress-free as possible so students can start their studies with confidence.`,
     q2: `The Sunshine Coast has a relaxed lifestyle, so it's a good idea to plan your accommodation and transport in advance. Once you're here, you'll find that people are very friendly and happy to help, making it easy to settle into your new life and studies.`,
