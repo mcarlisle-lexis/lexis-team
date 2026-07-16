@@ -49,6 +49,8 @@ const langFlagsOnly=str=>!str?"":str.split(",").map(s=>{const t=s.trim().toLower
 const TENURE={5:{a:"#EBBC8C",b:"#B87333",ring:"#8A5424",fg:"#4a2c10"},10:{a:"#EAEEF1",b:"#AAB2B9",ring:"#868F97",fg:"#3a4046"},15:{a:"#FBD670",b:"#E3A81E",ring:"#B0810F",fg:"#5a3d00"},20:{a:"#8FE6C9",b:"#12907C",ring:"#0b6152",fg:"#053a30"}};
 function tenureBadge(years,size){const t=TENURE[years];if(!t)return"";const s=size||42,id=`tg${years}_${Math.random().toString(36).slice(2,7)}`;return `<svg viewBox="0 0 100 100" width="${s}" height="${s}" role="img" aria-label="${years} years at Lexis"><defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.a}"/><stop offset="1" stop-color="${t.b}"/></linearGradient></defs><circle cx="50" cy="50" r="46" fill="url(#${id})" stroke="${t.ring}" stroke-width="3"/><circle cx="50" cy="50" r="39" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.4"/><text x="50" y="30" text-anchor="middle" font-size="13" fill="${t.fg}">★</text><text x="50" y="60" text-anchor="middle" font-family="Clash Display,sans-serif" font-weight="700" font-size="30" fill="${t.fg}">${years}</text><text x="50" y="76" text-anchor="middle" font-family="Clash Display,sans-serif" font-weight="600" font-size="11" letter-spacing="1.2" fill="${t.fg}">YEARS</text></svg>`;}
 
+const ENVELOPE = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>';
+
 /* ---- card ---- */
 function cardHTML(p){
   const col = CAMPUS_COLOR[p.campus]||"#F59120";
@@ -65,6 +67,7 @@ function cardHTML(p){
         <h3 class="lxteam-name">${esc(p.name)}</h3>
         <p class="lxteam-role">${roleLine}</p>
         ${p.languages?`<p class="lxteam-langs" title="${esc(p.languages)}">${langFlagsOnly(p.languages)}</p>`:""}
+        ${p.email?`<a class="lxteam-email" href="mailto:${esc(p.email)}" aria-label="Email ${esc(p.name)}">${ENVELOPE}<span>Email</span></a>`:""}
       </div>
     </div>`;
 }
@@ -89,6 +92,8 @@ const SCOPED_CSS = `
 .lexis-team-embed .lxteam-role{color:var(--lx-soft);font-size:13.5px;line-height:1.4;margin:5px 0 0}
 .lexis-team-embed .lxteam-langs{margin:10px 0 0;display:flex;gap:5px;flex-wrap:wrap;align-items:center}
 .lexis-team-embed .lxteam-flag{width:22px;height:auto;aspect-ratio:4/3;border-radius:2px;overflow:hidden;box-shadow:0 0 0 .5px rgba(34,31,31,.18)}
+.lexis-team-embed .lxteam-email{display:inline-flex;align-items:center;gap:7px;margin:12px 0 0;padding:7px 12px;border-radius:8px;background:#fff;border:1px solid var(--lx-line);color:#c9740f;text-decoration:none;font-weight:600;font-size:13px;transition:background .15s,border-color .15s,color .15s}
+.lexis-team-embed .lxteam-email:hover{background:var(--lx-orange);border-color:var(--lx-orange);color:#fff}
 .lexis-team-embed .lxteam-more{display:inline-block;margin-top:30px;font-weight:600;color:#c9740f;text-decoration:none}
 .lexis-team-embed .lxteam-more:hover{text-decoration:underline}
 </style>`;

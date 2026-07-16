@@ -154,6 +154,13 @@
     .m-close:hover{background:#fff; transform:scale(1.05)}
     .m-name{font-family:"Clash Display",sans-serif; font-weight:600; font-size:clamp(28px,4vw,40px); line-height:1; margin:0}
     .m-role{color:var(--orange-dk); font-weight:600; font-size:15px; margin:8px 0 0}
+    .m-email{
+      display:inline-flex; align-items:center; gap:9px; margin:16px 0 0;
+      padding:10px 16px; border-radius:8px; background:var(--orange); color:#fff;
+      text-decoration:none; font-weight:600; font-size:14px; transition:background .15s;
+    }
+    .m-email:hover{background:var(--orange-dk)}
+    .m-email svg{flex:0 0 auto}
     .m-tenure{display:flex; align-items:center; gap:11px; margin:16px 0 0}
     .m-tenure span{font-family:"Clash Display",sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:14px; color:var(--ink)}
     .m-tenure span small{display:block; font-size:11px; color:var(--muted); letter-spacing:.04em}
@@ -235,6 +242,7 @@
       "Head Office":"#5B6CF0"
     };
     const isTeam = c => TEAM_ORDER.includes(c);
+    const ENVELOPE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>';
 
     // Inline SVG flags (render identically on every OS — Windows/Chrome don't draw flag emoji)
     const starPts = (cx,cy,ro,spikes) => { const ri=ro*0.4, step=Math.PI/spikes; let d="M", rot=-Math.PI/2; for(let i=0;i<spikes*2;i++){ const r=i%2?ri:ro; d+=(cx+Math.cos(rot)*r).toFixed(2)+","+(cy+Math.sin(rot)*r).toFixed(2)+" "; rot+=step; } return d+"Z"; };
@@ -396,6 +404,7 @@
           <h2 class="m-name osw" id="m-name">${esc(p.name)}</h2>
           <p class="m-role">${esc(p.role)} · <span style="color:${col}">${esc(p.campus)}</span></p>
           ${p.years ? `<div class="m-tenure">${tenureBadge(p.years, 56)}<span>${p.years} Years at Lexis<small>Thank you for your service</small></span></div>` : ""}
+          ${p.email ? `<a class="m-email" href="mailto:${esc(p.email)}">${ENVELOPE}<span>Email ${esc(p.name.split(" ")[0])}</span></a>` : ""}
           <div class="m-meta">${meta.map(([k,v])=>`<span class="tag"><b>${esc(k)}</b> ${v}</span>`).join("")}</div>
           ${p.bio ? `<p class="m-bio">${esc(p.bio)}</p>` : ""}
           ${p.q1 ? `<div class="qa">
