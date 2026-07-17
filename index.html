@@ -113,11 +113,13 @@
       display:flex; align-items:center; gap:6px;
     }
     .cbadge .cdot{width:7px;height:7px;border-radius:50%}
-    .card-body{padding:16px 16px 18px}
-    .card-name{font-family:"Clash Display",sans-serif; font-weight:600; font-size:20px; line-height:1.1; margin:0; letter-spacing:-.01em}
-    .card-role{color:var(--ink-soft); font-size:13.5px; margin:5px 0 0; line-height:1.4}
-    .card-home{color:var(--muted); font-size:12px; margin:9px 0 0; display:flex; align-items:center; gap:5px}
-    .card-langs{margin:10px 0 0; display:flex; gap:5px; align-items:center; flex-wrap:wrap}
+    /* Tile alignment: fixed-height name+role blocks keep every row lined up,
+       and the flag row is pinned to the bottom of each card. */
+    .card-body{padding:16px 16px 18px; display:flex; flex-direction:column; flex:1}
+    .card-name{font-family:"Clash Display",sans-serif; font-weight:600; font-size:20px; line-height:1.15; margin:0; letter-spacing:-.01em; min-height:2.3em}
+    .card-role{color:var(--ink-soft); font-size:13.5px; margin:4px 0 0; line-height:1.4; min-height:2.8em}
+    .card-home{color:var(--muted); font-size:12px; margin:8px 0 0; display:flex; align-items:flex-start; gap:5px; line-height:1.35}
+    .card-langs{margin:auto 0 0; padding-top:12px; display:flex; gap:5px; align-items:center; flex-wrap:wrap}
     .card-langs .flag{width:22px}
     .flag{display:inline-block; width:1.25em; height:auto; aspect-ratio:4/3; border-radius:2px; overflow:hidden; vertical-align:-.18em; box-shadow:0 0 0 .5px rgba(26,23,20,.18)}
     .m-meta .tag .flag{vertical-align:-.16em}

@@ -118,7 +118,7 @@ window.PEOPLE = [
     q3: `I've been lucky enough to visit every Lexis campus, and what I love most is that each one offers a completely different experience. Noosa will always be special because it's where my journey began, but from beach towns to vibrant cities, every campus has its own unique vibe. If you can study at more than one campus, it's the best way to experience Australia.`
   },
   {
-    slug: "olga-kuperman", name: "Olga Kuperman", role: "Student Services",
+    slug: "olga-kuperman", name: "Olga Kuperman", role: "Student Services", email: "noosahomestay@lexisenglish.com",
     campus: "Noosa", languages: "", hometown: "Tula, Russia", since: "August 2017", photo: null,
     bio: `Living in five countries has shaped who I am and given me a deep appreciation for cultural exchange and new experiences. With an international career and a passion for building connections, I joined Lexis Noosa in 2026 and enjoy helping students feel at home by connecting them with the local community and helping them find their place in Noosa.`,
     q1: `I help shape the student experience beyond the classroom by connecting international students with welcoming host families. Through local community connections, students can immerse themselves in Australian culture and experience the unique Noosa coastal lifestyle.`,
