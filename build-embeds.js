@@ -9,8 +9,11 @@ global.window = {};
 require('./people.js');
 const PEOPLE = window.PEOPLE;
 
-const ASSET_BASE = 'https://mcarlisle-lexis.github.io/lexis-team/assets/';
-const FULL_DIR   = 'https://mcarlisle-lexis.github.io/lexis-team/';
+// Where the embeds load photos from. Override to host them anywhere else, e.g. after
+// bulk-uploading the photo pack to the WordPress Media Library:
+//   ASSET_BASE=https://2025.lexisenglish.com/wp-content/uploads/2026/07/ node build-embeds.js
+const ASSET_BASE = process.env.ASSET_BASE || 'https://mcarlisle-lexis.github.io/lexis-team/assets/';
+const FULL_DIR   = process.env.FULL_DIR   || 'https://mcarlisle-lexis.github.io/lexis-team/';
 
 const CAMPUS_COLOR = {
   "Sydney":"#2E86AB", "Brisbane":"#F59120", "Perth":"#C1436D",
